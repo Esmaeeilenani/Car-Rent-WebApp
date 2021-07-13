@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- get inclouded by JS -->
+    <header></header>
+
+    <main class="showcase container">
+      <div class="homePage">
+        <h1>Welcome to Car Renting site</h1>
+        <h2>
+          This website will help you to find the best Car to rent Login NOW!!!
+        </h2>
+
+        <h3>Log in as:</h3>
+        <a
+          href="RenterLogin.html"
+          target="_self"
+          class="btn-primary"
+          id="Renterbtn"
+          >Car Renter</a
+        >
+        <a href="ProviderLogin.html" target="_self" class="btn-primary"
+          >Car Provider</a
+        >
+      </div>
+
+      <i class="fas fa-car-side back-icon"></i>
+    </main>
+    <script type="module" defer src="js/main.js"></script>
+    <script type="module" defer>
+      import Preventer from "./js/main.js";
+      Preventer();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+$isShown: false;
+/*the content Slide from bottom to its position*/
+@keyframes slideBottom {
+  0% {
+    transform: translatey(100%);
+  }
+  100% {
+    transform: translatey(0);
+  }
+}
+
+/*the content Slide to Top from its position*/
+@keyframes slideToTop {
+  0% {
+    transform: translatey(0);
+  }
+  100% {
+    transform: translatey(-100%);
+  }
+}
+
+/*the content Slide from Top to its position*/
+@keyframes slideFromTop {
+  0% {
+    transform: translatey(-100%);
+  }
+  100% {
+    transform: translatey(0);
+  }
+}
+
+/*the content Slide from right to its position*/
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+    transform: translateZ(100%);
+  }
+}

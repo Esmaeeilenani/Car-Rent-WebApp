@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+
+    <title>Renter Login</title>
+  </head>
+  <body>
+    <!-- get inclouded by JS -->
+    <header></header>
+
+    <main class="showcase container">
+      <div class="Formcard">
+        <h3 class="card-header">Car Renter Login</h3>
+        <!-- Renter login form -->
+        <form method="POST" class="form" id="Login">
+          <div class="form-input">
+            <label>Username or Email</label>
+            <input
+              type="text"
+              placeholder="Example@Example.com"
+              autofocus
+              id="Username_email"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Error message</span>
+          </div>
+
+          <div class="form-input">
+            <label>Pssword</label>
+            <input type="password" placeholder="password" id="pass" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Error message</span>
+          </div>
+
+          <input type="submit" value="Login" class="btn-login" />
+        </form>
+        <!-- Renter login form End-->
+        <a href="#">Forgot your password?</a>
+        <a href="RenterRegister.html">Don't have an account? Create account</a>
+      </div>
+
+      <i class="fas fa-car-side back-icon"></i>
+    </main>
+
+    <script type="module" defer src="js/main.js"></script>
+    <script type="module" defer src="js/RenterLogin.js"></script>
+  </body>
+</html>

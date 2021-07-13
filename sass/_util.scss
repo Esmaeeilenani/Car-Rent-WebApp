@@ -1,0 +1,156 @@
+.container {
+  width: 90%;
+  height: 100vh;
+  margin: auto;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 10px;
+  /* horizontale , verticale, bluring, and the color*/
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px auto;
+  z-index: 100;
+}
+
+.card-header {
+  margin: 0;
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  text-align: start;
+  border-top: 0;
+  border-bottom: 1px solid #c9cccf;
+  font-size: 1.4rem;
+}
+
+//Form Style
+.form {
+  padding: 30px 40px;
+
+  //form input Style
+  .form-input {
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+    label {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      border: 2px solid #dddddd;
+      background-color: #eeeeee;
+      border-radius: 4px;
+      display: block;
+      padding: 10px;
+      width: 100%;
+
+      &:focus {
+        outline: none !important;
+        border-color: $secondary-color;
+        background-color: #ffffff;
+      }
+    }
+
+    i {
+      position: absolute;
+      top: 40px;
+      right: 10px;
+      visibility: hidden;
+    }
+
+    span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      visibility: hidden;
+    }
+
+    //case success
+    &.success {
+      input {
+        border-color: $success-color;
+      }
+      .fa-check-circle {
+        visibility: visible;
+        color: $success-color;
+      }
+    }
+    //case error
+    &.error {
+      input {
+        border-color: $error-color;
+      }
+      .fa-exclamation-circle {
+        visibility: visible;
+        color: $error-color;
+      }
+      span {
+        position: static;
+        visibility: visible;
+        color: $error-color;
+      }
+    }
+  }
+  //form input Style End
+}
+//Form Style End
+
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.overflow-hide {
+  overflow: hidden;
+}
+
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+//Alerts
+%alert {
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  i {
+    margin-right: 5px;
+  }
+}
+.alert-error {
+  @extend %alert;
+  background-color: #f2dede;
+  color: $alert-error-color;
+}
+.alert-success {
+  @extend %alert;
+  background-color: #dff0d8;
+  color: $alert-succes-color;
+}
+// Alerts Ends
+
+//easein mixin
+@mixin EaseIn() {
+  transition: all 0.3s ease-in;
+}
+
+/*
+to make the animation
+*/
+@mixin animation($keyframe, $duration, $timing) {
+  animation: $keyframe $duration $timing;
+}
+
+.slide-top {
+  @include animation(slideToTop, 0.8s, ease-in);
+}
+
+.slide-from-bottom {
+  @include animation(slideToTop, 0.8s, ease-in);
+}

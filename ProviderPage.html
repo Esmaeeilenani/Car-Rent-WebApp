@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+
+    <title>Provider Page</title>
+  </head>
+  <body>
+    <!-- get included by JS -->
+    <header></header>
+
+    <main class="showcase container">
+      <div class="INFO-card">
+        <h3 class="card-header">Provider Information</h3>
+
+        <div class="alert">
+          <div class="hide" id="alert-msg">
+            <i class="fas fa-exclamation-circle"></i>
+
+            <span id="msg"></span>
+            <span
+              class="btn-close"
+              onclick="this.parentElement.classList.add('hide')"
+              >&times;</span
+            >
+          </div>
+        </div>
+
+        <!-- Provider Information form -->
+        <form method="POST" class="INFO-form" id="Provider-INFO">
+          <div class="form-input">
+            <label>Company Name</label>
+            <input type="text" placeholder="example" disabled id="CName" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Error message</span>
+          </div>
+
+          <div class="form-input">
+            <label>Commercial record</label>
+            <input
+              type="text"
+              placeholder="Commercial record"
+              autofocus
+              id="CRecord"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Error message</span>
+          </div>
+
+          <div class="form-input">
+            <label>Phone Number</label>
+            <input type="text" placeholder="Phone" autofocus id="Phone" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Error message</span>
+          </div>
+
+          <div class="form-input">
+            <label>Email</label>
+            <input
+              type="text"
+              placeholder="Example@Example.com"
+              autofocus
+              id="email"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Error message</span>
+          </div>
+
+          <div class="form-input">
+            <label>Pssword</label>
+            <input type="password" placeholder="password" id="pass" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Error message</span>
+          </div>
+
+          <div class="form-input">
+            <label>Confirm Pssword</label>
+            <input
+              type="password"
+              placeholder="Confirm password"
+              id="Confpass"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Error message</span>
+          </div>
+        </form>
+        <!-- Provider Information form End-->
+
+        <div class="form-btn">
+          <button id="btn-update" class="btn-update">Update</button>
+          <button id="btn-logout" class="btn-logout">Logout</button>
+        </div>
+      </div>
+      <i class="fas fa-car-side back-icon"></i>
+    </main>
+    <script type="module" defer src="js/main.js"></script>
+    <script type="module" defer src="js/ProviderPage.js"></script>
+    <script type="module" defer>
+      // sessionStorage.clear();
+    </script>
+  </body>
+</html>

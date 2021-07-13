@@ -1,0 +1,120 @@
+%btn {
+  display: inline-block;
+  padding: 0.5rem 1.6rem;
+  border: 0;
+  margin: 0.3rem 0.3rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  border: 1px solid $primary-color;
+  cursor: pointer;
+  @include EaseIn();
+
+  &:hover {
+    background-color: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-primary {
+  @extend %btn;
+  background-color: $primary-color;
+  color: set-text-color($primary-color);
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    &:hover {
+      transform: none;
+      background-color: $primary-color;
+      color: set-text-color($primary-color);
+    }
+  }
+}
+
+.btn-secondary {
+  @extend %btn;
+  background-color: $secondary-color;
+  color: set-text-color($secondary-color);
+}
+
+.btn-login {
+  @extend .btn-primary;
+  width: 100%;
+  padding: 0.6rem 1.6rem;
+  font-size: 1.3rem;
+  &:hover {
+    transform: none;
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}
+.btn-register {
+  @extend .btn-secondary;
+  width: 100%;
+  padding: 0.6rem 1.6rem;
+  font-size: 1.3rem;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 4s;
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}
+.btn-update {
+  @extend .btn-register;
+  background-color: $primary-color;
+  color: set-text-color($primary-color);
+  width: auto;
+  padding: 0.3rem 1.3rem;
+  font-size: 1.3rem;
+  &:hover {
+    background-color: $success-color;
+  }
+}
+.btn-logout {
+  @extend .btn-update;
+  background-color: #f3efef;
+  color: set-text-color(#f3efef);
+  &:hover {
+    opacity: 1;
+    background-color: $error-color;
+  }
+}
+
+.btn-close {
+  background-color: none;
+  line-height: 20px;
+  font-weight: bold;
+  font-size: 28px;
+  opacity: 0.5;
+  float: right;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.btn-del {
+  @extend .btn-logout;
+  font-size: 28px;
+  margin: 0;
+  padding: 0 20px;
+
+  &.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    &:hover {
+      background-color: #f3efef;
+      color: set-text-color(#f3efef);
+    }
+  }
+}

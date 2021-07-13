@@ -1,0 +1,16 @@
+$primary-color: #34373a;
+$secondary-color: DodgerBlue;
+$success-color: #2ecc71;
+$error-color: #e74c3c;
+$alert-error-color: #a94442;
+$alert-succes-color: #3c763d;
+
+//set text color based on the background color
+@function set-text-color($color) {
+  //if the bg color is light
+  @if (lightness($color) > 50) {
+    @return #000000;
+  } @else {
+    @return #fff;
+  }
+}

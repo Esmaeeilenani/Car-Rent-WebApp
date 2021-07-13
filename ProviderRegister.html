@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+
+    <title>Provider Registeration</title>
+  </head>
+  <body>
+    <!-- get included by JS -->
+    <header></header>
+
+    <main class="showcase container">
+      <div class="Formcard">
+        <h3 class="card-header">Provider Registeration</h3>
+
+        <!-- Provider Registeration form -->
+        <form method="POST" class="form" id="Register">
+          <div class="form-input">
+            <label>Company name</label>
+            <input
+              type="text"
+              placeholder="Company name"
+              autofocus
+              id="CName"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Error message</span>
+          </div>
+
+          <div class="form-input">
+            <label>Commercial record</label>
+            <input
+              type="text"
+              placeholder="Commercial record"
+              autofocus
+              id="CRecord"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Error message</span>
+          </div>
+
+          <div class="form-input">
+            <label>Phone Number</label>
+            <input type="text" placeholder="0500000000" autofocus id="Phone" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Error message</span>
+          </div>
+
+          <div class="form-input">
+            <label>Email</label>
+            <input
+              type="text"
+              placeholder="Example@Example.com"
+              autofocus
+              id="email"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Error message</span>
+          </div>
+
+          <div class="form-input">
+            <label>Pssword</label>
+            <input type="password" placeholder="password" id="pass" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Error message</span>
+          </div>
+
+          <div class="form-input">
+            <label>Confirm Pssword</label>
+            <input
+              type="password"
+              placeholder="Confirm password"
+              id="Confpass"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Error message</span>
+          </div>
+
+          <input type="submit" value="Register" class="btn-register" />
+        </form>
+        <!-- Provider Registeration form End-->
+
+        <a href="ProviderLogin.html">have an account? Login Now</a>
+      </div>
+
+      <i class="fas fa-car-side back-icon"></i>
+    </main>
+
+    <script type="module" defer src="js/main.js"></script>
+    <script type="module" defer src="js/ProviderRegister.js"></script>
+  </body>
+</html>

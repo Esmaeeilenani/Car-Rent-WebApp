@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+
+    <title>My Cars</title>
+  </head>
+  <body>
+    <!-- get included by JS -->
+    <header></header>
+
+    <main class="showcase container">
+      <div class="car-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Car ID</th>
+              <th>Car Model</th>
+              <th>Model Year</th>
+              <th>Car Type</th>
+              <th>Price</th>
+              <th>Status</th>
+              <th>Renter Name</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="cars-list"></tbody>
+        </table>
+      </div>
+      <button class="btn-primary" id="btn-AddCar">Add Car</button>
+      <i class="fas fa-car-side back-icon"></i>
+    </main>
+
+    <!-- Cover the page -->
+    <div class="overlay hide" id="overlay"></div>
+
+    <!-- Card container -->
+    <div class="INFO-card car hide" id="car-container">
+      <span class="btn-close" id="closeForm">&times;</span>
+      <h3 class="card-header" id="card-header">
+        <!-- Add By JS -->
+      </h3>
+
+      <!-- Alert Massege   -->
+      <div class="alert">
+        <div class="hide" id="alert-msg">
+          <i class="fas fa-exclamation-circle"></i>
+          <span id="msg"></span>
+          <span
+            class="btn-close"
+            onclick="this.parentElement.classList.add('hide')"
+            >&times;</span
+          >
+        </div>
+      </div>
+
+      <!-- Car Information form -->
+      <form method="POST" class="INFO-form" id="Car-INFO">
+        <div class="form-input">
+          <label>Car ID</label>
+          <input type="text" placeholder="XXXXXXXXXXXXXXXXX" id="CarID" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <span>Error message</span>
+        </div>
+
+        <div class="form-input">
+          <label>Car Model</label>
+          <input type="text" placeholder="Model" autofocus id="CarModel" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <span>Error message</span>
+        </div>
+
+        <div class="form-input">
+          <label>Model Year</label>
+          <input type="date" autofocus id="Model_Year" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <span>Error message</span>
+        </div>
+
+        <div class="form-input">
+          <label>Car Type</label>
+          <input type="text" placeholder="sedan" autofocus id="CarType" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <span>Error message</span>
+        </div>
+
+        <div class="form-input">
+          <label>Price</label>
+          <input type="text" placeholder="Price per day" id="Price" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <span>Error message</span>
+        </div>
+
+        <div class="form-input">
+          <label>Status</label>
+          <input type="text" placeholder="Available" id="Status" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <span>Error message</span>
+        </div>
+
+        <div class="form-input">
+          <label>Renter Name</label>
+          <input type="text" placeholder="Renter" id="RenterName" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <span>Error message</span>
+        </div>
+        <!-- <input type="reset"> -->
+      </form>
+      <!-- Car Information form End-->
+
+      <div class="form-btn">
+        <button id="btn-add" class="btn-primary">Add</button>
+        <button id="btn-update" class="btn-update">Update</button>
+      </div>
+    </div>
+
+    <script type="module" defer src="js/main.js"></script>
+    <script type="module" defer src="js/ProviderCars.js"></script>
+  </body>
+</html>
